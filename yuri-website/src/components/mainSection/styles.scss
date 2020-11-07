@@ -1,0 +1,42 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/global.scss";
+
+.main {
+  @include flex(center, center);
+  margin-top: 100px;
+}
+
+.photo-section {
+  @include flex(space-between, center);
+}
+
+.photo-container,
+.info-section-container {
+  overflow: hidden;
+}
+
+.photo-skew {
+  transform: skew(-5deg);
+  width: 266px;
+  height: 472px;
+  margin-left: -20px;
+  margin-right: 20px;
+}
+
+.info-skew {
+  background-color: white;
+  transform: skew(-5deg);
+  width: 574px;
+  height: 472px;
+  margin-left: 20px;
+  margin-right: -20px;
+}
+
+.info-skew-back {
+  transform: skew(5deg);
+}
+
+.photo {
+  height: 100%;
+  width: 100%;
+}

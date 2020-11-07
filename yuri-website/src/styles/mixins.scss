@@ -1,0 +1,17 @@
+@mixin m {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin s {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin flex($just, $align) {
+  display: flex;
+  justify-content: #{$just};
+  align-items: #{$align};
+}
