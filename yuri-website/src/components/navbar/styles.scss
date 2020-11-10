@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+.nav-logo {
+  position: relative;
+  overflow: visible;
+}
+
 .nav-content {
   padding-top: 40px;
   @include flex(space-between, center);
@@ -25,8 +30,8 @@
 .circles {
   position: absolute;
   left: 15%;
-  top: 5px;
-  @include s {
+  top: -30px;
+  @include m {
     img {
       width: 150px;
       height: 120px;

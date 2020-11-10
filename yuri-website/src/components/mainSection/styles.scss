@@ -13,6 +13,7 @@
 .photo-container,
 .info-section-container {
   overflow: hidden;
+  //box-shadow: 6px 6px 10px black;
 }
 
 .photo-skew {
@@ -21,10 +22,17 @@
   height: 472px;
   margin-left: -20px;
   margin-right: 20px;
+  overflow: hidden;
+}
+
+.photo-skew-back {
+  height: 100%;
+  width: 100%;
+  transform: skew(5deg);
 }
 
 .info-skew {
-  background-color: white;
+  overflow: hidden;
   transform: skew(-5deg);
   width: 574px;
   height: 472px;
@@ -34,6 +42,32 @@
 
 .info-skew-back {
   transform: skew(5deg);
+  height: 100%;
+  @include flex(space-between, center);
+  flex-direction: column;
+}
+
+.info-name {
+  background-color: white;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 34px 100px;
+  width: 600px;
+}
+
+.info-yuri {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.info-text {
+  margin-right: 30px;
+  width: 610px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 31px 53px;
+  line-height: 25px;
 }
 
 .photo {

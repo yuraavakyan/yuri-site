@@ -18,11 +18,40 @@ function MainSection() {
 
           <div className="info-section-container">
             <div className="info-skew">
-              <div className="info-skew-back"></div>
+              <div className="info-skew-back">
+                <div className="info-name">
+                  <div className="greeting">
+                    <div>Hello and Welcome</div>
+                    <div>
+                      I'm <span className="info-yuri">Yuri Avagyan</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="info-text">
+                  “ Hi, I am Yuri, and I create responsive web sites using
+                  modern technologies such as React.js Node.js SCSS and other
+                  commonly used ones. I’m also fine working with databases with
+                  such tools as Mongo DB, MySQL and other database managing
+                  frameworks. I have experience as a freelance developer and can
+                  manage my time effeciently. I am a strong team player, who
+                  believes that a team can do more rather than an individual. ”
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="buttons"></div>
+        <div className="buttons">
+          <div className="download-btn-container">
+            <div className="download-skew">
+              <div className="download-skew-back">Download CV</div>
+            </div>
+          </div>
+          <div className="more-btn-container">
+            <div className="more-skew">
+              <div className="more-skew-back">More...</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

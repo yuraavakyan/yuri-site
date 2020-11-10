@@ -8,10 +8,10 @@ function Navbar() {
   return (
     <header className="navbar ">
       <div className="nav-content container">
-        <div className="circles">
-          <img src={circles}></img>
-        </div>
         <div className="nav-logo">
+          <div className="circles">
+            <img src={circles}></img>
+          </div>
           <div className="name">Yuri Avagyan</div>
           <div className="web">Web Developer</div>
         </div>
