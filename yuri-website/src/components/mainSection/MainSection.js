@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/global.scss";
 import "./styles.scss";
-import photo from "../../images/photo.png";
+import photo from "../../images/photo1.png";
 
 function MainSection() {
   return (
