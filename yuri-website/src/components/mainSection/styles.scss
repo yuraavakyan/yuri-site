@@ -3,17 +3,22 @@
 
 .main {
   @include flex(center, center);
-  margin-top: 120px;
+  height: 88vh;
 }
 
 .photo-section {
   @include flex(space-between, center);
+  @include s {
+    flex-direction: column;
+  }
 }
 
 .photo-container,
 .info-section-container {
   overflow: hidden;
-  //box-shadow: 6px 6px 10px black;
+  @include s {
+    overflow: visible;
+  }
 }
 
 .info-section-container {
@@ -25,31 +30,34 @@
 }
 
 .photo-skew {
-  transform: skew(-5deg);
+  transform: skew(-2deg);
   width: 266px;
   height: 472px;
   margin-left: -20px;
-  margin-right: 20px;
+  margin-right: 8px;
   overflow: hidden;
 }
 
 .photo-skew-back {
   height: 100%;
   width: 100%;
-  transform: skew(5deg);
+  transform: skew(2deg);
+  @include m {
+    transform: none;
+  }
 }
 
 .info-skew {
   overflow: hidden;
-  transform: skew(-5deg);
+  transform: skew(-2deg);
   width: 574px;
   height: 472px;
-  margin-left: 20px;
+  margin-left: 8px;
   margin-right: -20px;
 }
 
 .info-skew-back {
-  transform: skew(5deg);
+  transform: skew(2deg);
   height: 100%;
   @include flex(space-between, center);
   flex-direction: column;

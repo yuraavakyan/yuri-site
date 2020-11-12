@@ -1,9 +1,56 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/global.scss";
 
+@keyframes down {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes up {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
 .navbar {
   @include flex(center, center);
   width: 100%;
+}
+
+.mobile-view {
+  width: 100%;
+  height: 80vh;
+  background-color: black;
+  position: absolute;
+  top: -100%;
+  z-index: 3;
+}
+
+.open {
+  animation-name: down;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.closed {
+  animation-name: up;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.mobile-content {
+  color: white;
+  padding: 100px 100px;
+  @include flex(space-between, center);
+  flex-direction: column;
+  margin-top: 200px;
+  height: 60%;
 }
 
 .nav-logo {
@@ -16,6 +63,7 @@
   @include flex(space-between, center);
   width: 100%;
   color: #fff;
+  z-index: 4;
 }
 
 .nav-list {
@@ -33,8 +81,7 @@
   top: -45px;
   @include m {
     img {
-      width: 150px;
-      height: 120px;
+      width: 230px;
     }
   }
 }
@@ -66,6 +113,7 @@
 }
 
 .burger {
+  position: relative;
   display: none;
   @include m {
     height: 30px;
@@ -75,10 +123,26 @@
   }
 }
 
-.line {
+.line1,
+.line2,
+.line3 {
   background-color: white;
   height: 3px;
   width: 100%;
+}
+
+.burger-open {
+  .line1 {
+    transform: rotate(45deg);
+    position: absolute;
+  }
+  .line2 {
+    display: none;
+  }
+  .line3 {
+    transform: rotate(-45deg);
+    position: absolute;
+  }
 }
 
 .nav-content {
