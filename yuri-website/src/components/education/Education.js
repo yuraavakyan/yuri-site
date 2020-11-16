@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { useState } from "react";
 import "./styles.scss";
 import eduicon from "../../images/icons/edu-icon.png";
 import pluralsight from "../../images/icons/pluralsight.png";
@@ -6,6 +7,23 @@ import coursera from "../../images/icons/coursera.png";
 import free from "../../images/icons/free.png";
 
 function Education() {
+  let rau = React.useRef();
+  let confucius = React.useRef();
+  const arr = [];
+  const [state, setState] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        if (state == false) {
+          rau.current.classList.add("animated-left");
+          confucius.current.classList.add("animated-right");
+          setState(true);
+        }
+      }
+    });
+  });
+
   return (
     <div className="education">
       <div className="education-content container">
@@ -14,7 +32,7 @@ function Education() {
           <img className="edu-icon" src={eduicon}></img>
         </div>
         <div className="edu-items">
-          <div className="rau">
+          <div className="rau" ref={rau}>
             <div className="rau-skew">
               <div className="rau-skew-back">
                 <div className="rau-text">
@@ -27,7 +45,7 @@ function Education() {
               </div>
             </div>
           </div>
-          <div className="confucius">
+          <div className="confucius" ref={confucius}>
             <div className="confucius-skew">
               <div className="confucius-skew-back">
                 <div className="confucius-text">

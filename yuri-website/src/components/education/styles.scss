@@ -1,5 +1,34 @@
 @import "../../styles/mixins.scss";
 
+@keyframes left {
+  from {
+    right: 1000px;
+  }
+  to {
+    right: 1px;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 1000px;
+  }
+  to {
+    left: 1px;
+  }
+}
+
+@keyframes closer {
+  from {
+    width: 500px;
+    height: 300px;
+  }
+  to {
+    width: 600px;
+    height: 370px;
+  }
+}
+
 .education {
   height: 100vh;
   background-color: white;
@@ -20,25 +49,43 @@
   font-size: 40px;
 }
 
+.animated-left {
+  animation-name: left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.animated-right {
+  animation-name: right;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
 .edu-items {
   font-size: 30px;
   @include flex(space-between, center);
+  position: relative;
+  height: 300px;
 }
 
 .rau,
 .confucius {
-  max-width: 500px;
+  width: 500px;
   overflow: hidden;
   height: 300px;
 }
 
 .rau {
+  position: absolute;
   border-left: 2px solid black;
+  right: 1000px;
 }
 
 .confucius {
+  position: absolute;
   border-right: 2px solid black;
   color: white;
+  left: 1000px;
 }
 
 .rau-skew,
@@ -81,15 +128,14 @@
 .courses {
   font-size: 30px;
   overflow: hidden;
-  color: white;
+  color: black;
 }
 
 .courses-skew {
   transform: skew(-5deg);
-  border: 2px solid black;
   margin-right: -15px;
   margin-left: 15px;
-  background-color: black;
+  background-color: #4dd9e2;
 }
 
 .courses-text {

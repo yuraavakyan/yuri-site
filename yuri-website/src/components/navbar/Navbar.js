@@ -1,5 +1,4 @@
-import React, { createRef } from "react";
-import { useSatet } from "react";
+import React, { createRef, useEffect } from "react";
 import "../../styles/global.scss";
 import "../../styles/mixins.scss";
 import "./styles.scss";
@@ -10,7 +9,23 @@ function Navbar() {
   const [state, setState] = useState(false);
   let burger = React.createRef();
   let nav = React.createRef();
+  let circles = React.createRef();
+  let navbar = React.createRef();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        circles.current.classList.add("none");
+        nav.current.classList.add("scrolled");
+      } else {
+        circles.current.classList.remove("none");
+        nav.current.classList.remove("scrolled");
+      }
+    });
+  });
+
   const clickHandler = () => {
+    console.log(burger);
     if (state == false) {
       burger.current.classList.remove("burger-closed");
       burger.current.classList.add("burger-open");
@@ -28,7 +43,7 @@ function Navbar() {
   return (
     <header className="navbar ">
       <div className="mobile-view" ref={nav}>
-        <div className="mobile-content">
+        <div className="mobile-content ">
           <div>Home</div>
           <div>Education</div>
           <div>Working experience</div>
@@ -36,9 +51,9 @@ function Navbar() {
           <div>Contact me</div>
         </div>
       </div>
-      <div className="nav-content container">
+      <div className="nav-content container" ref={nav}>
         <div className="nav-logo">
-          <div className="circles">
+          <div className="circles" ref={circles}>
             <img src={circles}></img>
           </div>
           <div className="name">Yuri Avagyan</div>

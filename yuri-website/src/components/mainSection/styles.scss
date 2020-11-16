@@ -1,6 +1,51 @@
 @import "../../styles/mixins.scss";
 @import "../../styles/global.scss";
 
+@keyframes photo-come {
+  from {
+    transform: translate(-600px, -200px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes greeting-come {
+  from {
+    transform: translate(50px, -600px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes download-come {
+  from {
+    transform: translate(300px, 800px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes more-come {
+  from {
+    transform: translate(800px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes text-come {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
 .main {
   @include flex(center, center);
   height: 88vh;
@@ -27,6 +72,8 @@
 
 .photo-container {
   border-radius: 20px 0 0 0;
+  transform: translate(-600px, -200px);
+  animation: photo-come 1s forwards;
 }
 
 .photo-skew {
@@ -69,6 +116,8 @@
   font-weight: 400;
   padding: 34px 100px;
   width: 600px;
+  transform: translate(50px, -600px);
+  animation: greeting-come 2s forwards;
 }
 
 .info-yuri {
@@ -80,10 +129,11 @@
   margin-right: 30px;
   width: 580px;
   background-color: black;
-  color: white;
+  color: black;
   font-size: 18px;
   padding: 31px 53px;
   line-height: 25px;
+  animation: text-come 2s forwards;
 }
 
 .photo {
@@ -104,8 +154,15 @@
   overflow: hidden;
 }
 
+.download-btn-container {
+  transform: translate(300px, 800px);
+  animation: download-come 1s forwards;
+}
+
 .more-btn-container {
   border-radius: 0 0 20px 0;
+  transform: translate(800px, 0);
+  animation: more-come 2s forwards;
 }
 
 .download-skew {
