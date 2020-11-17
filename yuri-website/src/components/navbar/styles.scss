@@ -32,8 +32,8 @@
   width: 10 0%;
 }
 
-.scrolled {
-  background-color: black;
+.none {
+  display: none;
 }
 
 .mobile-view {
@@ -76,8 +76,8 @@
   @include flex(space-between, center);
   width: 100%;
   color: #fff;
-  z-index: 4;
   position: fixed;
+  z-index: 4;
   margin-top: 100px;
 }
 
@@ -90,6 +90,10 @@
   }
 }
 
+.nav-item:hover {
+  color: #4dd9e2;
+}
+
 .circles {
   position: absolute;
   left: 15%;
@@ -100,6 +104,12 @@
     }
   }
   animation: circle 6s infinite linear forwards;
+}
+
+.scrolled {
+  background-color: black;
+  padding-top: 0;
+  width: 100%;
 }
 
 .name {
@@ -159,11 +169,4 @@
     transform: rotate(-45deg);
     position: absolute;
   }
-}
-
-.nav-content {
-  padding-top: 40px;
-  @include flex(space-between, center);
-  width: 100%;
-  color: #fff;
 }

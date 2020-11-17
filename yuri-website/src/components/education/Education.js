@@ -14,7 +14,7 @@ function Education() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 400) {
         if (state == false) {
           rau.current.classList.add("animated-left");
           confucius.current.classList.add("animated-right");

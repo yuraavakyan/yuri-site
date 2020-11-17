@@ -38,7 +38,7 @@
 .education-content {
   @include flex(space-between, center);
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 }
 
 .education-title {
