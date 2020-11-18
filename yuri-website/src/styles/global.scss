@@ -16,9 +16,11 @@ a {
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, black, black, white);
+  width: 100vw;
+  background-image: url("../images/backgr.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-attachment: contain;
+  background-size: cover;
 }
 
 .container {

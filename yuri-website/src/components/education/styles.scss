@@ -29,16 +29,35 @@
   }
 }
 
+@keyframes logo {
+  from {
+  }
+}
+
 .education {
   height: 100vh;
-  background-color: white;
-  @include flex(center, center);
+  background-color: transparent;
+  @include flex(center, start);
+  position: relative;
+  padding-top: 50px;
+  overflow: hidden;
 }
 
 .education-content {
   @include flex(space-between, center);
   flex-direction: column;
   gap: 50px;
+}
+
+.background {
+  overflow: hidden;
+  height: 65vh;
+  width: 100%;
+  //background-color: #4dd9e2;
+  position: absolute;
+  transform: skewY(-5deg);
+  z-index: -2;
+  top: -60px;
 }
 
 .education-title {
@@ -51,17 +70,18 @@
 
 .animated-left {
   animation-name: left;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 .animated-right {
   animation-name: right;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 .edu-items {
+  position: relative;
   font-size: 30px;
   @include flex(space-between, center);
   position: relative;
@@ -131,26 +151,26 @@
   color: black;
 }
 
-.courses-skew {
-  transform: skew(-5deg);
-  margin-right: -15px;
-  margin-left: 15px;
-  background-color: #4dd9e2;
-}
-
 .courses-text {
   padding: 10px;
-}
-
-.courses-skew-back {
-  transform: skew(5deg);
-}
-
-.companies {
   @include flex(space-between, center);
   flex-direction: column;
+  gap: 50px;
+}
+
+.platforms {
+  @include flex(space-between, center);
   gap: 10px;
   font-size: 40px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo1-container {
+  @include flex(center, center);
+  gap: 15px;
 }
 
 .platforms-skew-back {

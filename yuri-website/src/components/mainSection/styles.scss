@@ -49,6 +49,9 @@
 .main {
   @include flex(center, center);
   height: 100vh;
+  background: linear-gradient(135deg, black, black, white);
+  background-repeat: no-repeat;
+  background-attachment: contain;
 }
 
 .photo-section {

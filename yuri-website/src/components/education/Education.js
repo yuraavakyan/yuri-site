@@ -27,6 +27,9 @@ function Education() {
   return (
     <div className="education">
       <div className="education-content container">
+        <div className="background">
+          <div className="background-skew"></div>
+        </div>
         <div className="education-title">
           <h2 className="title">Education</h2>
           <img className="edu-icon" src={eduicon}></img>
@@ -58,33 +61,36 @@ function Education() {
           </div>
         </div>
         <div className="courses">
-          <div className="courses-skew">
-            <div className="courses-skew-back">
-              <div className="courses-text">
-                <div>2019 - Present</div>
-                <div>
-                  Dozens of online-courses regarding Javascript including
-                  React.js, Node.js, Databases and other related topics at such
-                  platforms as:
+          <div className="courses-text">
+            <div>2019 - Present</div>
+            <div>
+              Dozens of online-courses regarding Javascript including React.js,
+              Node.js, Databases and other related topics at such platforms as:
+            </div>
+            <div className="platforms">
+              <div className="logo">
+                <div className="logo1-container">
+                  <span>
+                    <img src={pluralsight}></img>
+                  </span>
+                  <span>Pluralsight</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="platforms">
-          <div className="platforms-skew">
-            <div className="platforms-skew-back">
-              <div className="companies">
-                <img src={pluralsight}></img>
-                <div company-title>Pluralsight</div>
+              <div className="logo">
+                <div className="logo2-container">
+                  <span>
+                    <img src={pluralsight}></img>
+                  </span>
+                  <span>Pluralsight</span>
+                </div>
               </div>
-              <div className="companies">
-                <img src={coursera}></img>
-                <div company-title>Coursera</div>
-              </div>
-              <div className="companies">
-                <img src={free}></img>
-                <div company-title>Freecodecamp</div>
+              <div className="logo">
+                <div className="logo3-container">
+                  <span>
+                    <img src={pluralsight}></img>
+                  </span>
+                  <span>Pluralsight</span>
+                </div>
               </div>
             </div>
           </div>
