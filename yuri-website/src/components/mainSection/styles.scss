@@ -176,6 +176,10 @@
   margin-left: -5px;
 }
 
+.download-skew:hover {
+  opacity: 0.5;
+}
+
 .download-skew-back {
   font-size: 22px;
   transform: skew(-10deg);
@@ -188,6 +192,10 @@
   margin-right: -5px;
   margin-left: 5px;
   color: #fff;
+}
+
+.more-skew:hover {
+  opacity: 0.5;
 }
 
 .more-skew-back {

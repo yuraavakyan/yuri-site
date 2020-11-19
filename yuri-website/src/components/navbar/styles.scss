@@ -3,7 +3,7 @@
 
 @keyframes down {
   from {
-    top: -100%;
+    top: -800px;
   }
   to {
     top: 0;
@@ -15,7 +15,7 @@
     top: 0;
   }
   to {
-    top: -100%;
+    top: -800px;
   }
 }
 
@@ -29,7 +29,8 @@
 }
 .navbar {
   @include flex(center, center);
-  width: 10 0%;
+  width: 100%;
+  position: relative;
 }
 
 .none {
@@ -41,7 +42,7 @@
   height: 80vh;
   background-color: black;
   position: absolute;
-  top: -100%;
+  top: -800px;
   z-index: 3;
 }
 
@@ -76,7 +77,7 @@
   @include flex(space-between, center);
   width: 100%;
   color: #fff;
-  position: fixed;
+  position: absolute;
   z-index: 4;
   margin-top: 100px;
 }
@@ -108,12 +109,6 @@
     }
   }
   animation: circle 6s infinite linear forwards;
-}
-
-.scrolled {
-  background-color: black;
-  padding-top: 0;
-  width: 100%;
 }
 
 .name {
@@ -173,4 +168,16 @@
     transform: rotate(-45deg);
     position: absolute;
   }
+}
+
+.scrolled {
+  .nav-content {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  background-color: black;
+  padding-top: 0;
+  height: 100px;
+  position: fixed;
+  z-index: 20;
 }

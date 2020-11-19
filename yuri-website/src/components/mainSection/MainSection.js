@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../styles/global.scss";
 import "./styles.scss";
 import photo from "../../images/photo1.png";
 
 function MainSection() {
+  let info = React.createRef();
+
+  useEffect(() => {
+    console.log(info.current.offsetWidth);
+  });
+
   return (
     <section className="main">
       <div className="main-content">
@@ -27,7 +33,7 @@ function MainSection() {
                     </div>
                   </div>
                 </div>
-                <div className="info-text">
+                <div className="info-text" ref={info}>
                   “ Hi, I am Yuri, and I create responsive web sites using
                   modern technologies such as React.js Node.js SCSS and other
                   commonly used ones. I’m also fine working with databases with

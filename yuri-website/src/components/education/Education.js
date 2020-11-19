@@ -9,15 +9,17 @@ import free from "../../images/icons/free.png";
 function Education() {
   let rau = React.useRef();
   let confucius = React.useRef();
+  let title = React.useRef();
   const arr = [];
   const [state, setState] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 300) {
         if (state == false) {
           rau.current.classList.add("animated-left");
           confucius.current.classList.add("animated-right");
+          title.current.classList.add("showUp");
           setState(true);
         }
       }
@@ -25,12 +27,9 @@ function Education() {
   });
 
   return (
-    <div className="education">
+    <section className="education">
       <div className="education-content container">
-        <div className="background">
-          <div className="background-skew"></div>
-        </div>
-        <div className="education-title">
+        <div className="education-title" ref={title}>
           <h2 className="title">Education</h2>
           <img className="edu-icon" src={eduicon}></img>
         </div>
@@ -69,7 +68,7 @@ function Education() {
             </div>
             <div className="platforms">
               <div className="logo">
-                <div className="logo1-container">
+                <div className="logo-container">
                   <span>
                     <img src={pluralsight}></img>
                   </span>
@@ -77,26 +76,26 @@ function Education() {
                 </div>
               </div>
               <div className="logo">
-                <div className="logo2-container">
+                <div className="logo-container">
                   <span>
-                    <img src={pluralsight}></img>
+                    <img src={coursera}></img>
                   </span>
-                  <span>Pluralsight</span>
+                  <span>Coursera</span>
                 </div>
               </div>
               <div className="logo">
-                <div className="logo3-container">
+                <div className="logo-container">
                   <span>
-                    <img src={pluralsight}></img>
+                    <img src={free}></img>
                   </span>
-                  <span>Pluralsight</span>
+                  <span>FreeCodeCamp</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

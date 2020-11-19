@@ -50,7 +50,7 @@ function Navbar() {
   };
 
   return (
-    <header className="navbar">
+    <header className="navbar" ref={nav}>
       <div className="mobile-view" ref={navbar}>
         <div className="mobile-content">
           <div>Home</div>
@@ -60,7 +60,7 @@ function Navbar() {
           <div>Contact me</div>
         </div>
       </div>
-      <div className="nav-content container" ref={nav}>
+      <div className="nav-content container">
         <div className="nav-logo">
           <div className="circles" ref={circle}>
             <img src={circles}></img>
