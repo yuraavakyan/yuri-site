@@ -28,6 +28,7 @@ function Education() {
 
   return (
     <section className="education">
+      <a id="education-sec"></a>
       <div className="education-content container">
         <div className="education-title" ref={title}>
           <h2 className="title">Education</h2>

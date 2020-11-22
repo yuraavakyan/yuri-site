@@ -49,7 +49,9 @@ function MainSection() {
         <div className="buttons">
           <div className="download-btn-container">
             <div className="download-skew">
-              <div className="download-skew-back">Download CV</div>
+              <a href="Yuri_Avagyan.pdf" download>
+                <div className="download-skew-back">Download CV</div>
+              </a>
             </div>
           </div>
           <div className="more-btn-container">

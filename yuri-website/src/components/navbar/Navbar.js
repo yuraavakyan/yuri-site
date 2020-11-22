@@ -74,7 +74,7 @@ function Navbar() {
               Home
             </span>
           </a>
-          <a href="#">
+          <a href="#education-sec">
             <span className="nav-item" onClick={navClickHandler}>
               Education
             </span>

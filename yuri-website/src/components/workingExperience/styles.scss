@@ -1,1 +1,22 @@
 @import "../../styles/mixins.scss";
+
+.working {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  @include flex(center, center);
+}
+
+.working-content {
+  @include flex(center, center);
+  flex-direction: column;
+}
+
+.working-title {
+  @include flex(space-between, center);
+  gap: 20px;
+  font-size: 40px;
+  img {
+    width: 76px;
+  }
+}
