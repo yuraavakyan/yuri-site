@@ -10,7 +10,7 @@ function Education() {
   let rau = React.useRef();
   let confucius = React.useRef();
   let title = React.useRef();
-  const arr = [];
+  let courses = React.useRef();
   const [state, setState] = useState(false);
 
   useEffect(() => {
@@ -20,6 +20,7 @@ function Education() {
           rau.current.classList.add("animated-left");
           confucius.current.classList.add("animated-right");
           title.current.classList.add("showUp");
+          courses.current.style = "animation: courses 1s forwards 2s;";
           setState(true);
         }
       }
@@ -60,7 +61,7 @@ function Education() {
             </div>
           </div>
         </div>
-        <div className="courses">
+        <div className="courses" ref={courses}>
           <div className="courses-text">
             <div>2019 - Present</div>
             <div>

@@ -1,4 +1,5 @@
 @import "../../styles/mixins.scss";
+@import "../education/styles.scss";
 
 .working {
   height: 100vh;
@@ -8,15 +9,18 @@
 }
 
 .working-content {
-  @include flex(center, center);
+  @include flex(space-between, center);
   flex-direction: column;
+  position: relative;
 }
 
 .working-title {
-  @include flex(space-between, center);
+  @include flex(center, center);
+  width: 1200px;
   gap: 20px;
-  font-size: 40px;
+  font-size: 60px;
   img {
     width: 76px;
   }
+  position: absolute;
 }
