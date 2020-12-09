@@ -26,17 +26,20 @@ function Navbar() {
   });
 
   const clickHandler = () => {
-    if (state == false) {
+    if (!state) {
       burger.current.classList.remove("burger-closed");
       burger.current.classList.add("burger-open");
       navbar.current.classList.remove("closed");
       navbar.current.classList.add("open");
+      document.body.classList.add("body-fix");
       setState(true);
     } else {
       burger.current.classList.remove("burger-open");
       burger.current.classList.add("burger-closed");
       navbar.current.classList.remove("open");
       navbar.current.classList.add("closed");
+      document.body.classList.remove("body-fix");
+
       setState(false);
     }
   };

@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import "../../styles/global.scss";
 import "./styles.scss";
 import photo from "../../images/photo1.png";
 
 function MainSection() {
-  let info = React.createRef();
+  let info = useRef();
 
   useEffect(() => {
     console.log(info.current.offsetWidth);

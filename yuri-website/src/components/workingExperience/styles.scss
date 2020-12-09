@@ -5,7 +5,9 @@
   height: 100vh;
   width: 100vw;
   background-color: white;
-  @include flex(center, center);
+  @include flex(center, space-between);
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .working-content {
@@ -23,4 +25,47 @@
     width: 76px;
   }
   position: absolute;
+
+  top: 400px;
+}
+
+.working-text {
+  @include flex(space-between, center);
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid black;
+  padding: 20px 0;
+  width: 1000px;
+  overflow: hidden;
+  position: relative;
+  font-size: 16px;
+}
+
+.freelancing {
+  @include flex(center, center);
+  flex-direction: column;
+  gap: 20px;
+  z-index: 5;
+}
+
+.creating {
+  max-width: 70%;
+}
+
+.technologies {
+  @include flex(center, center);
+  gap: 70px;
+  img {
+    height: 70px;
+  }
+}
+
+.blue-background {
+  position: absolute;
+  height: 300px;
+  width: 1000px;
+  background-color: #4dd9e2;
+  z-index: 0;
+  top: -100px;
+  transform: skewY(-4deg);
 }
